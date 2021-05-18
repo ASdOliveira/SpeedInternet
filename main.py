@@ -1,14 +1,10 @@
-import speedtest
+#example of usage
+from SpeedResult import SpeedResult
 
+speed = SpeedResult()
+speed.getSpeed()
 
-st = speedtest.Speedtest()
-closest_servers = st.get_closest_servers()
-for key, value in closest_servers[1].items():
-    print(key, ' : ', value)
+print(speed.download, speed.upload, speed.ping)
+print(speed.Server.Name, speed.Server.Location, speed.Server.url)
 
-print(st.download())
-
-print(st.upload())
-
-print(st.results.ping)
 
